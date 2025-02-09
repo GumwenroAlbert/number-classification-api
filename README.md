@@ -56,6 +56,7 @@ Example Error Response (400 Bad Request)
 Deployment
 The API is deployed and publicly accessible at:http://35.175.140.4:5000/api/classify-number?number=371
 
+
 Technology Stack
 🖥️ Backend: Python (Flask)
 ☁️ Deployment: AWS EC2
