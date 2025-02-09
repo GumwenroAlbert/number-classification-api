@@ -6,11 +6,13 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# Root route that you will add
+# Root route that you will 
 @app.route('/')
 def home():
-    return "Welcome to the Number Classification API!"
-
+    return jsonify({
+        'message': 'Welcome to the Number Classification API!',
+        'status': 'success'
+    })
 # Existing routes for your API
 @app.route('/classify', methods=['POST'])
 def classify_number():
