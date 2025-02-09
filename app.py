@@ -2,6 +2,25 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# Root route that you will add
+@app.route('/')
+def home():
+    return "Welcome to the Number Classification API!"
+
+# Existing routes for your API
+@app.route('/classify', methods=['POST'])
+def classify_number():
+    # Your existing logic for classifying numbers
+    return jsonify({"result": "classified number"})
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=8080)
+
+
 def is_armstrong(n):
     digits = [int(d) for d in str(n)]
     return sum(d ** len(digits) for d in digits) == n
